@@ -1,0 +1,176 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.645);
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bolder;
+  font-size: 25px;
+  color: #333;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: darkgreen;
+  display: block;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(225, 225, 225, 0.763);
+  color: rgb(9, 106, 14);
+}
+
+.navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background: #fff;
+  display: none;
+}
+
+.navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(225, 225, 225, 0.763);
+}
+
+.navbar ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+
+/** COMENTARIO: poner display:none en .navbar ul li ul 
+(antes no estaba - se pone para que el sub-menú se empiece a esconder). **/
+.navbar ul li:focus-within > ul,
+.navbar ul li:hover > ul {
+  display: initial;
+}
+
+header label {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none; /**Pongo esto para que la etiqueta menu desaparezca al agrandar la pantalla**/
+}
+
+#menu-bar {
+  display: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #ffffff;
+  color: #ffffff;
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+}
+
+.botones_footer {
+  color: darkgreen;
+}
+
+.botones_footer:hover {
+  color: #ffffff;
+  transition: 0.4s;
+}
+
+.logo {
+  font-weight: bolder;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+
+body {
+  min-height: 100vh;
+  background: url(../Imagenes/photo-1469474968028-56623f02e42e.avif);
+  background-position: center;
+  position: relative;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 50%;
+  padding: 20px;
+  background-color: rgb(218, 229, 238);
+  margin: 100px;
+  border: 2px solid grey;
+  width: 300px;
+}
+
+.card p {
+  color: rgb(0, 0, 0);
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+}
+
+.cards {
+  display: grid;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-top: 1px solid black;
+    display: none; /** se pone despues de hacer el .navbar ul li ul li ul en @media **/
+  }
+  .navbar ul li {
+    width: 100%;
+  }
+  .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  .navbar ul li ul li {
+    background: #ffffff;
+  }
+  .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}/*# sourceMappingURL=style.css.map */

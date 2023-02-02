@@ -1,0 +1,84 @@
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.645);
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+    label {
+        font-size: 20px;
+        color: $main-second;
+
+        display: none;
+        /**Pongo esto para que la etiqueta menu desaparezca al agrandar la pantalla**/
+    }
+
+    cursor: pointer;
+
+    .logo {
+        font-weight: bolder;
+        font-size: $font-size-logo;
+        color: $main-second;
+    }
+
+
+    .navbar ul {
+        list-style: none;
+
+        ul li {
+            position: relative;
+            float: left;
+        }
+
+
+        ul li a {
+            font-size: 20px;
+            padding: 20px;
+            color: $bg-second;
+            display: block;
+        }
+
+        &:hover {
+            background-color: rgba(225, 225, 225, 0.763);
+            color: $word-color;
+        }
+
+
+        ul li ul {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background: #fff;
+            display: none;
+        }
+
+        ul li ul li {
+            width: 100%;
+            border-top: 1px solid rgba(225, 225, 225, 0.763);
+        }
+
+        ul li ul li ul {
+            left: 200px;
+            top: 0;
+        }
+
+
+        /** COMENTARIO: poner display:none en .navbar ul li ul 
+(antes no estaba - se pone para que el sub-menú se empiece a esconder). **/
+
+        ul li:focus-within>ul,
+        ul li:hover>ul {
+            display: initial;
+        }
+    }
+
+    #menu-bar {
+        display: none;
+    }
+
+}

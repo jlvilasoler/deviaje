@@ -1,0 +1,53 @@
+@media(max-width:991px) {
+    
+    header {
+    padding: 20px;
+
+    label {
+        display: initial;
+        }
+    }
+
+
+
+    .navbar {
+        position: absolute;
+        top: 100%; left:0 ; right:0;
+        background: $bk-color;
+        border-top: 1px solid black;
+        display: none; /** se pone despues de hacer el .navbar ul li ul li ul en @media **/
+        }
+
+        #menu-bar:checked ~ .navbar {
+            display: initial;
+        }
+
+        ul li{
+            width: 100%;
+            }
+        
+            ul li ul{
+            position: relative;
+            width: 100%;
+        }
+        
+            ul li ul li{
+            background: $bk-color;
+        }
+        
+            ul li ul li ul{
+            width: 100%;
+            left:0;
+        }
+
+
+
+
+
+
+    
+
+
+}
+
+

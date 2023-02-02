@@ -1,0 +1,41 @@
+.logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: $bg-main;
+}
+
+
+body {
+    min-height: 100vh;
+    background: url(../Imagenes/photo-1469474968028-56623f02e42e.avif);
+    background-position: center;
+    position: relative;
+}
+
+
+
+
+.cards {
+    display: grid;
+
+    .card {
+        display: grid;
+        grid-template-columns: 50%;
+        padding:20px;
+        background-color: $bk-color;
+        margin: 100px;
+        border: 2px solid grey;
+        width: 300px;
+    
+        p {
+            color: $bg-main;
+            text-decoration: solid;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+        }
+    
+    }
+
+}
+
